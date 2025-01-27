@@ -24,6 +24,7 @@ import axios from "axios";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/service/firebaseConfig";
 import { User } from "lucide-react";
+import { useNavigate, useNavigation } from "react-router-dom";
 
 function CreateTrip() {
   const [place, setPlace] = useState();
@@ -33,6 +34,7 @@ function CreateTrip() {
 
   const [loading, setLoading] = useState(false);
 
+  const navigate=useNavigate()
   const handleInputChange = (name, value) => {
     setFormData({
       ...formData,
@@ -97,6 +99,7 @@ function CreateTrip() {
       id: docId,
     });
     setLoading(false);
+    navigate('/view-trip/'+docId);
   };
 
   const GetUserProfile = (tokenInfo) => {
@@ -200,6 +203,8 @@ function CreateTrip() {
               "Generate Trip"
             )}
           </Button>
+
+
         </div>
         <Dialog open={openDialog}>
           <DialogContent>
