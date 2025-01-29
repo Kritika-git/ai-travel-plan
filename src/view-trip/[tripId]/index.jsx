@@ -36,7 +36,7 @@ function ViewTrip() {
      <InfoSection trip={trip}/>
 
      {/* Hotel Recommendations */}
-    <Hotels trip={trip}/>
+     <Hotels trip={trip}/>
      {/* Itinery */}
      <PlacesToVisit trip={trip}/>
     {/* Footer */}
