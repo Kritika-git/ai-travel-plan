@@ -64,9 +64,9 @@ function Header() {
               <a href='/my-trips'>
               <Button varient="outline" className="rounded-full">My Trips</Button>
               </a>
-              <Popover>
-              <PopoverTrigger>
-                <img src={user?.picture} className='h-[35px] w-[35px] rounded-full'/>
+              <Popover >
+              <PopoverTrigger className="bg-transparent ">
+                <img src={user?.picture} className='h-[45px] w-[45px] rounded-full '/>
               </PopoverTrigger>
               <PopoverContent>
               <h2 className='cursor-pointer'
@@ -74,6 +74,7 @@ function Header() {
                 googleLogout();
                 localStorage.clear();
                 window.location.reload();
+                window.location.href = "/";
                 
               }}> Log Out</h2>
               </PopoverContent>
