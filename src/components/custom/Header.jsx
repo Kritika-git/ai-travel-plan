@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/dialog";
 import { FcGoogle } from "react-icons/fc";
 import axios from "axios";
+import ThemeToggle from './ThemeToggle';
 
 function Header() {
 
@@ -50,8 +51,11 @@ function Header() {
 
   return (
     <div className='p-3 shadow-sm flex justify-between items-center px-5'>
+      <a href='/'>
         <img src="/logo.svg"/>
-        <div>
+        </a>
+        <div className='flex items-center gap-5'>
+          <ThemeToggle/>
             {user?
             <div className='flex items-center gap-5'>
               <a href='/create-trip'>
