@@ -112,7 +112,7 @@ function Hero() {
           <h1 className="font-black text-3xl md:text-5xl bg-gradient-to-b from-primary/90 to-primary/60 bg-clip-text text-transparent">
           Your Dream Trip <br /> One Click Away with
           </h1>
-          <h1 className="font-black text-5xl md:text-9xl bg-gradient-to-b from-purple-500 to-purple-900 bg-clip-text text-center text-transparent pb-4">
+          <h1 className="font-black text-5xl md:text-9xl bg-gradient-to-b from-[#9C27B0] to-[#540561] bg-clip-text text-center text-transparent pb-4">
           JourneyBot
           </h1>
         </div>

@@ -52,7 +52,7 @@ function Header() {
   return (
     <div className='p-3 shadow-sm flex justify-between items-center px-5'>
       <a href='/'>
-        <img src="/logo.svg"/>
+        <img src="/logo_new.png"  className="h-[90px] w-[250px]"/>
         </a>
         <div className='flex items-center gap-5'>
           <ThemeToggle/>
