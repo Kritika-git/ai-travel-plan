@@ -35,24 +35,29 @@ Ensure you have the following installed:
 2. **Install dependencies**
 ```bash
    npm install  
+   ```
 
 3. ***Set up environment variables***
     Create a .env file in the root directory and add:
 
 ```bash
     GEMINI_API_KEY=your_gemini_api_key  
-    FIREBASE_CONFIG=your_firebase_config  
+    FIREBASE_CONFIG=your_firebase_config
+```
+
 4.***Run the application***
 
 ```bash
 npm run dev  
 5.***Open in Browser***
 Navigate to http://localhost:3000 to access JourneyBot.
+```
 
 ### 🛤 Roadmap
- Add multi-user collaboration for trip planning.
- Enhance AI suggestions with real-time data.
- Integrate flight & hotel booking APIs.
- Develop a mobile app version.
+ -Add multi-user collaboration for trip planning.
+ -Enhance AI suggestions with real-time data.
+ =Integrate flight & hotel booking APIs.
+ -Develop a mobile app version.
+
 ###🏆 Contributing
 Contributions are welcome! Feel free to fork the repo, open issues, or submit a pull request.
