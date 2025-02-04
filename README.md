@@ -48,10 +48,11 @@ Ensure you have the following installed:
 4.***Run the application***
 
 ```bash
-npm run dev  
+npm run dev
+```
 5.***Open in Browser***
 Navigate to http://localhost:3000 to access JourneyBot.
-```
+
 
 ### 🛤 Roadmap
  -Add multi-user collaboration for trip planning.
