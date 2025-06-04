@@ -1,5 +1,6 @@
 # 🌍 JourneyBot - AI Trip Planner  
 
+Live Website Link : [https://ai-travel-plan-alpha.vercel.app/](https://ai-travel-plan-alpha.vercel.app/)
 ## 🚀 Overview  
 **JourneyBot** is an AI-powered trip planner designed to help users effortlessly plan their travel itineraries. Whether you're looking for **personalized recommendations**, **budget-friendly options**, or **must-visit attractions**, JourneyBot simplifies the process with intelligent suggestions.  
 
