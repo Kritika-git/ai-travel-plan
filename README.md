@@ -56,10 +56,10 @@ Navigate to http://localhost:3000 to access JourneyBot.
 
 
 ### 🛤 Roadmap
- -Add multi-user collaboration for trip planning.
- -Enhance AI suggestions with real-time data.
- =Integrate flight & hotel booking APIs.
- -Develop a mobile app version.
+ - Add multi-user collaboration for trip planning.
+ - Enhance AI suggestions with real-time data.
+ - Integrate flight & hotel booking APIs.
+ - Develop a mobile app version.
 
 ###🏆 Contributing
 Contributions are welcome! Feel free to fork the repo, open issues, or submit a pull request.
