@@ -10,12 +10,12 @@ Live Website Link : [https://ai-travel-plan-alpha.vercel.app/](https://ai-travel
 - 🗺 **Interactive Map Integration** – Visualize destinations on an interactive map.  
 - 💰 **Budget Optimization** – Plan trips within your budget constraints.  
 - 📅 **Schedule Planner** – Organize your trip with a day-by-day breakdown.  
-- 🔐 **Google Authentication** – Secure login via Google Sign-In using Firebase.  
+- 🔐 **Google Authentication** – Secure login via Google Sign-In. 
 - 🛠 **User-Friendly Interface** – Seamless experience with a modern UI built with **ShadCN UI**.  
 
 ## 🏗 Tech Stack  
 - **Frontend**: React, Tailwind CSS, ShadCN UI  
-- **Database & Authentication**: Firebase (with Google Authentication)  
+- **Database & Authentication**: Firebase ,Google Authentication (OAuth 2.0)  
 - **AI Integration**: Gemini API (for recommendations & itinerary planning)
 
 
