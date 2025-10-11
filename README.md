@@ -14,7 +14,8 @@
 
 ## 🏗 Tech Stack  
 - **Frontend**: React, Tailwind CSS, ShadCN UI  
-- **Database & Authentication**: Firebase (with Google Authentication)  
+- **Database**: Firebase Firestore 
+- **Authentication** :Direct OAuth implementation via @react-oauth/google 
 - **AI Integration**: Gemini API (for recommendations & itinerary planning)  
 
 ## 🛠 Installation  
@@ -49,6 +50,8 @@ Ensure you have the following installed:
 
 ```bash
 npm run dev  
+```
+
 5.***Open in Browser***
 Navigate to http://localhost:3000 to access JourneyBot.
 ```
