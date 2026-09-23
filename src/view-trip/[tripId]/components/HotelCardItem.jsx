@@ -30,13 +30,14 @@ function HotelCardItem({ hotel }) {
       }
       target="_blank"
     >
-      <div className="hover:scale-105 transition-all cursor-pointer">
-        <img src={photoUrl?photoUrl:"/placeholder.jpg"} className="rounded-xl h-[180px] w-full object-cover"></img>
-        <div className="my-2 flex flex-col gap-2">
-          <h2 className="font-medium text-black">{hotel?.hotel_name}</h2>
-          <h2 className="text-xs text-gray-500">📍{hotel?.hotel_address}</h2>
-          <h2 className="text-sm text-gray-700">💰{hotel?.hotel_pricing}</h2>
-          <h2 className="text-sm text-gray-700">⭐{hotel?.rating} stars</h2>
+      <div className="group w-[260px] shrink-0 snap-start cursor-pointer transition-transform hover:-translate-y-1 sm:w-[300px]">
+        <div className="overflow-hidden rounded-2xl">
+          <img src={photoUrl?photoUrl:"/placeholder.jpg"} alt={hotel?.hotel_name} className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"></img>
+        </div>
+        <div className="flex flex-col gap-1 border-b border-border py-4">
+          <h2 className="font-semibold">{hotel?.hotel_name}</h2>
+          <h2 className="truncate text-xs text-muted-foreground">{hotel?.hotel_address}</h2>
+          <h2 className="text-xs uppercase tracking-wider text-muted-foreground">{hotel?.hotel_pricing} <span className="mx-1">·</span> {hotel?.rating} rating</h2>
         </div>
       </div>
     </Link>

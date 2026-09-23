@@ -29,23 +29,24 @@ function MyTrips() {
 });
     }
   return (
-    <div className='sm:px-10 md:px-32 lg:px-56 xl:px-30 px-5 mt-10'>
-        <h2 className='font-bold text-3xl'>My Trips</h2>
+    <main className='mx-auto max-w-6xl px-5 py-12 sm:px-10 lg:py-16'>
+      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-primary">Your journeys</p>
+      <h2 className='font-bold text-4xl tracking-tight'>My Trips</h2>
 
-        <div className='grid grid-cols-2 mt-10 md:grid-cols-3 gap-5'>
+        <div className='mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3'>
 
           {userTrips?.length>0?userTrips.map((trip,index)=>(
             <UserTripCardItem trip={trip} key={index}/>
           ))
         :[1,2,3,4,5,6].map((item,index)=>(
-          <div key={index} className='h-[220px] w-full bg-slate-200 animate-pulse rounded-xl'>
+          <div key={index} className='h-[280px] w-full animate-pulse rounded-2xl border border-border bg-muted'>
 
           </div>
 
         ))
         }
         </div>
-    </div>
+    </main>
   )
 }
 

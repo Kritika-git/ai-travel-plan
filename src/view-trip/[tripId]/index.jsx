@@ -31,7 +31,7 @@ function ViewTrip() {
 
 
   return (
-    <div className='p-10 md:px-20 lg:px-44 xl:px-56'>
+    <main className='mx-auto max-w-7xl px-5 py-10 sm:px-10 lg:px-16 lg:py-14'>
      {/*Information Section*/}   
      <InfoSection trip={trip}/>
 
@@ -40,7 +40,7 @@ function ViewTrip() {
      {/* Itinery */}
      <PlacesToVisit trip={trip}/>
     {/* Footer */}
-    </div>
+    </main>
   )
 }
 

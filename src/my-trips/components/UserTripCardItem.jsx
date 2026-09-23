@@ -19,15 +19,15 @@ function UserTripCardItem({trip}) {
         })
       }
   return (
-    <Link to={'/view-trip/'+trip?.id} className='text-black'>
-    <div className='hover:scale-105 transition-all'>
-        <img src={photoUrl?photoUrl:"/placeholder.jpg"} className='rounded-xl h-[220px] w-full object-cover'/>
-        <div>
+    <Link to={'/view-trip/'+trip?.id} className='group text-foreground'>
+    <div className='overflow-hidden rounded-2xl border border-border/70 bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl'>
+      <img src={photoUrl?photoUrl:"/placeholder.jpg"} alt={trip?.userSelection?.location?.label} className='h-[220px] w-full object-cover transition-transform duration-500 group-hover:scale-105'/>
+      <div className="p-4">
         <h2 className='font-bold text-lg'>
           {trip?.userSelection?.location?.label}  
           
         </h2>
-        <h2 className='text-sm text-gray-500'>{trip?.userSelection?.noOfDays} Days trip with {trip?.userSelection?.budget} budget for {trip?.userSelection?.noOfPeople}.</h2>
+        <h2 className='text-sm text-muted-foreground'>{trip?.userSelection?.noOfDays} Days trip with {trip?.userSelection?.budget} budget for {trip?.userSelection?.noOfPeople}.</h2>
         </div>
        
     </div>

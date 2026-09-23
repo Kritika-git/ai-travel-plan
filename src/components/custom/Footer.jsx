@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="bg-[#540561] text-white py-4 text-center">
+    <footer className="border-t border-border bg-muted/40 py-6 text-center text-muted-foreground">
       <p className="text-sm">
         © {new Date().getFullYear()} Made by Kritika.
       </p>

@@ -3,31 +3,6 @@ import { Button } from '../ui/button'
 import { Link } from 'react-router-dom'
 import Marquee from '../ui/marquee';
 
-// function Hero() {
-//   return (
-//     <div className='flex flex-col items-center mx-56 gap-10'>
-//         <h1
-//         className='font-extrabold text-[50px] text-center mt-16'>
-//          <span className='text-[#2E236C]'>Discover Your Next Adventure with AI:</span> Personalized Itineraries at Your Fingertips 
-//         </h1>
-//         <p className='text-xl text-gray-700 text-center'>
-//         Your personal trip planner and travel curator, creating custom itineraries tailored to your interests and budget.
-//         </p>
-       
-       
-//        <Link to={'/create-trip'}>
-//        <Button>Get Started, It's Free</Button>
-//        </Link>
-       
-        
-
-        
-//         </div> 
-//   )
-// }
-
-// export default Hero
-
 function Hero() {
  
   const images = [
@@ -103,16 +78,14 @@ function Hero() {
   const second = images.slice(images.length / 2);
 
   return (
-    <div
-      
-      className="flex items-center flex-col text-center justify-center min-h-screen py-10"
-    >
+    <main className="relative flex min-h-[calc(100vh-76px)] flex-col items-center justify-center overflow-hidden py-14 text-center sm:py-20">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top, hsl(var(--accent)), transparent_52%)] opacity-70" />
       <div className="text px-10 md:px-40 flex flex-col items-center justify-center gap-4">
         <div className="heading p-2 md:py-5">
-          <h1 className="font-black text-3xl md:text-5xl bg-gradient-to-b from-primary/90 to-primary/60 bg-clip-text text-transparent">
+          <h1 className="font-black text-3xl leading-tight text-foreground md:text-5xl">
           Your Dream Trip <br /> One Click Away with
           </h1>
-          <h1 className="font-black text-5xl md:text-9xl bg-gradient-to-b from-[#9C27B0] to-[#540561] bg-clip-text text-center text-transparent pb-4">
+          <h1 className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text pb-4 text-5xl font-black text-transparent md:text-8xl">
           JourneyBot
           </h1>
         </div>
@@ -129,7 +102,7 @@ function Hero() {
           </Link>
           
         </div>
-        <div className="marquee relative flex w-[75vw] flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+        <div className="marquee relative mt-8 flex w-[min(1100px,90vw)] flex-col items-center justify-center overflow-hidden rounded-2xl py-3">
           <Marquee reverse pauseOnHover className="[--duration:60s]">
             {second.map((item, index) => {
               return (
@@ -138,7 +111,7 @@ function Hero() {
                   to={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="img cursor-pointer border hover:border-foreground transition-all overflow-hidden rounded-md w-[200px] md:w-[250px]"
+                  className="img cursor-pointer overflow-hidden rounded-md transition-all w-[200px] md:w-[250px]"
                 >
                   <img
                     src={item.src}
@@ -146,7 +119,6 @@ function Hero() {
                     className="h-full hover:scale-110 duration-300"
                     loading="lazy"
                     role="presentation"
-                    fetchPriority="high"
                   />
                 </Link>
               );
@@ -160,7 +132,7 @@ function Hero() {
                   to={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="img cursor-pointer border hover:border-foreground transition-all overflow-hidden rounded-md w-[200px] md:w-[250px]"
+                  className="img cursor-pointer overflow-hidden rounded-md transition-all w-[200px] md:w-[250px]"
                 >
                   <img
                     src={item.src}
@@ -168,18 +140,17 @@ function Hero() {
                     className="h-full hover:scale-110 duration-300"
                     loading="lazy"
                     role="presentation"
-                    fetchPriority="high"
                   />
                 </Link>
               );
             })}
           </Marquee>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background to-transparent"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background to-transparent"></div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

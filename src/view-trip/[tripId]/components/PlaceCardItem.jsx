@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GetPlaceDetails, PHOTO_REF_URL } from "@/service/GlobalApi";
+import { Clock3, Wallet } from "lucide-react";
 
 function PlaceCardItem({ activity }) {
   const [photoUrl, setPhotoUrl] = useState("/placeholder.jpg"); // Default placeholder
@@ -29,25 +30,25 @@ function PlaceCardItem({ activity }) {
       href={"https://www.google.com/maps/search/?api=1&query=" + activity.place_name}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col shadow-md rounded-lg p-4 hover:scale-105 transition-all cursor-pointer h-full"
+      className="group relative mb-8 grid cursor-pointer gap-5 border-b border-border pb-8 last:mb-0 last:border-0 last:pb-0 md:grid-cols-[minmax(180px,38%)_1fr]"
     >
       <img
         src={photoUrl}
         alt={activity.place_name}
-        className="w-full h-40 object-cover rounded-lg"
+        className="aspect-video h-auto w-full rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.02]"
       />
-      <div className="flex flex-col justify-between flex-grow mt-4">
-        <h4 className="font-bold text-lg text-gray-800">{activity.place_name}</h4>
-        <p className="text-sm text-gray-600 mt-2">{activity.place_details}</p>
-        <div className="mt-3">
-          <p className="text-sm text-gray-700">
-            <span className="font-medium text-gray-700">💰</span> {activity.ticket_pricing}
+      <div className="flex flex-grow flex-col justify-between py-1">
+        <h4 className="text-xl font-semibold">{activity.place_name}</h4>
+        <p className="mt-2 text-sm text-muted-foreground">{activity.place_details}</p>
+        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+          <p className="flex items-center gap-1.5 text-xs uppercase tracking-wide text-muted-foreground">
+            <Wallet className="h-4 w-4 text-primary" /> {activity.ticket_pricing}
           </p>
-          <p className="text-sm text-gray-700">
-            <span className="font-medium">🕒</span> {activity.time_travel_from_prev}
+          <p className="flex items-center gap-1.5 text-xs uppercase tracking-wide text-muted-foreground">
+            <Clock3 className="h-4 w-4 text-primary" /> {activity.time_travel_from_prev}
           </p>
           {activity.best_time_to_visit && (
-            <p className="text-sm mt-2 text-yellow-700 bg-yellow-100 p-2 rounded-lg">
+            <p className="mt-2 w-full text-xs uppercase tracking-wide text-warning">
               Best Time to Visit: {activity.best_time_to_visit}
             </p>
           )}
